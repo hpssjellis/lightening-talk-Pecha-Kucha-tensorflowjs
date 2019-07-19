@@ -10,27 +10,7 @@
 .mySlides {display:none;}
 </style>
   
-  
 
-<script>
- let myIndex = 0
- let myLooper= 0
-  
- carousel();
-
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  myLooper = setTimeout(carousel, 5000); // Change image every 2 seconds
-}
-</script>  
-  
 </head>
 
 <body bgcolor="lightblue">
@@ -69,7 +49,27 @@ function carousel() {
   <img class="mySlides" src="xOr-keras02.png" style="width:100%">
 </div>
 
+  
 
+<script>
+ let myIndex = 0
+ let myLooper= 0
+  
+ carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  myLooper = setTimeout(carousel, 5000); // Change image every 2 seconds
+}
+</script>  
+  
 
 </body>
 </html>
