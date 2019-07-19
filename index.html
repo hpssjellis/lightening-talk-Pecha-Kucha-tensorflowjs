@@ -13,7 +13,7 @@
 
 <body>
 
-<h2 class="w3-center">Automatic Slideshow</h2>
+  <h2 class="w3-center"><a href="https://www.rocksetta.com/tensorflowjs/">https://www.rocksetta.com/tensorflowjs/</a></h2>
 
 <div class="w3-content w3-section" style="max-width:500px">
   <img class="mySlides" src="advanced-keras.png" style="width:100%">
@@ -53,9 +53,13 @@ function carousel() {
   myIndex++;
   if (myIndex > x.length) {myIndex = 1}    
   x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 20000); // Change image every 2 seconds
+  setTimeout(carousel, 2000); // Change image every 2 seconds
 }
 </script>
+  
+<input type=button value="next" onclick="{
+    alert()                                         
+}">  
 
 </body>
 </html>
