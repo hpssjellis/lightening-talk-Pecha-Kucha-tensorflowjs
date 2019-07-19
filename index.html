@@ -35,7 +35,11 @@
   
 <input type=number value=20 id="myNum" style="width: 40px;" onchange="{
    myMainNum = document.getElementById('myNum').value 
-   if (myMainNum <= 0){myMainNum = 1}                                                                   
+   if (myMainNum <= 0){
+      myMainNum = 1
+      document.getElementById('myNum').value  = myMainNum                                                               
+   } 
+                                                                      
  }"> seconds per slide.
   
   
