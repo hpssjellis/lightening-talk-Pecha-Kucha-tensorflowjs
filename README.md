@@ -6,7 +6,7 @@ https://hpssjellis.github.io/lightening-talk-Pecha-Kucha-tensorflowjs/
 
 
 
-I had to make a Pecha Kucha format Lightening Talk and as I normal wing everything I found making the slides kind of boring so to make things a bit more interesting I made this Gitpages website repository. It is not bad for practising your talk. If you want to use it just follow these steps:
+I had to make a Pecha Kucha format Lightening Talk and once my code works I typically wing my presentation so I found making the slides kind of boring. To make things a bit more interesting I made this Gitpages website repository. It is not bad for practising your talk. If you want to use it just follow these steps:
 
 1. Fork this repository
 1. Go in to "Settings" and set "Github Pages" source to "master branch"
