@@ -32,10 +32,10 @@
   
 <input type=number value=20 id="myNum" style="width: 40px;" onchange="{
    myMainNum = document.getElementById('myNum').value                                                                  
- }"> seconds per slide
+ }"> seconds per slide.
   
-  <br>
-  <div id="myNumSlides"> ...</div>  <br>
+  
+  <span id="myNumSlides"> ...</span>  <br>
   
 <div class="w3-content w3-section" style="max-width:500px">
   <img class="mySlides" src="me-at-twitter.jpg" style="width:100%">
@@ -80,7 +80,7 @@ function carousel() {
   myIndex++;
   if (myIndex > x.length) {myIndex = 1}    
   x[myIndex-1].style.display = "block";  
-  document.getElementById("myNumSlides").innerHTML = `slide ${myIndex} of ${x.length} slides`
+  document.getElementById("myNumSlides").innerHTML = ` slide ${myIndex} of ${x.length} slides`
   myLooper = setTimeout(carousel, myMainNum*1000); // Change image every x seconds
 }
   
