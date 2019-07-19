@@ -23,15 +23,18 @@
    carousel()  
 }">   
   
+<input type=button value="Back" onclick="{
+   myIndex = myIndex - 2                                      
+   myNext()
+}">   
+  
 <input type=button value="Next" onclick="{
-   //  myIndex++;                           
-   //  clearInterval(myLooper)  
-   //  carousel()  
    myNext()
 }"> 
   
 <input type=number value=20 id="myNum" style="width: 40px;" onchange="{
-   myMainNum = document.getElementById('myNum').value                                                                  
+   myMainNum = document.getElementById('myNum').value 
+   if (myMainNum <= 0){myMainNum = 0}                                                                   
  }"> seconds per slide.
   
   
