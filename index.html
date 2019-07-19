@@ -26,7 +26,11 @@
    //  clearInterval(myLooper)  
    //  carousel()  
    myNext()
-}">  <br><br>
+}"> 
+  
+<input type=number value=20 id="myNum" size=5 onchange="alert()"> 
+  
+  <br><br>
   
   
 <div class="w3-content w3-section" style="max-width:500px">
@@ -59,6 +63,7 @@
 <script>
  let myIndex = 0
  let myLooper= 0
+ let myMainNum = 20
   
  //carousel();
 
@@ -71,7 +76,7 @@ function carousel() {
   myIndex++;
   if (myIndex > x.length) {myIndex = 1}    
   x[myIndex-1].style.display = "block";  
-  myLooper = setTimeout(carousel, 5000); // Change image every 2 seconds
+  myLooper = setTimeout(carousel, myMainNum*1000); // Change image every x seconds
 }
   
   
