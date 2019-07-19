@@ -24,7 +24,8 @@
 }">   
   
 <input type=button value="Back" onclick="{
-   myIndex = myIndex - 2                                      
+   myIndex = myIndex - 2    
+   if (myIndex <= 0){myIndex=0}                                      
    myNext()
 }">   
   
@@ -34,7 +35,7 @@
   
 <input type=number value=20 id="myNum" style="width: 40px;" onchange="{
    myMainNum = document.getElementById('myNum').value 
-   if (myMainNum <= 0){myMainNum = 0}                                                                   
+   if (myMainNum <= 0){myMainNum = 1}                                                                   
  }"> seconds per slide.
   
   
