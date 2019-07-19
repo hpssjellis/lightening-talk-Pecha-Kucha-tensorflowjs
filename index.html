@@ -35,7 +35,7 @@
  }"> seconds per slide
   
   <br><br>
-  
+  <div id="myNumSlides"> ...</div>  
   
 <div class="w3-content w3-section" style="max-width:500px">
   <img class="mySlides" src="me-at-twitter.jpg" style="width:100%">
@@ -80,6 +80,7 @@ function carousel() {
   myIndex++;
   if (myIndex > x.length) {myIndex = 1}    
   x[myIndex-1].style.display = "block";  
+  document.getElementsByClassName("myNumSlides").innerHTML = 'wow'
   myLooper = setTimeout(carousel, myMainNum*1000); // Change image every x seconds
 }
   
