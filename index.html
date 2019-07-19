@@ -5,7 +5,7 @@
 <title>W3.CSS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
 <style>
 .mySlides {display:none;}
 </style>
@@ -14,7 +14,12 @@
 <body>
 
   <h2 class="w3-center"><a href="https://www.rocksetta.com/tensorflowjs/">https://www.rocksetta.com/tensorflowjs/</a></h2>
-
+  
+<input type=button value="next" onclick="{
+    alert()                                         
+}">  
+  
+  
 <div class="w3-content w3-section" style="max-width:500px">
   <img class="mySlides" src="advanced-keras.png" style="width:100%">
   <img class="mySlides" src="atwoods-law.png" style="width:100%">
@@ -56,10 +61,7 @@ function carousel() {
   setTimeout(carousel, 2000); // Change image every 2 seconds
 }
 </script>
-  
-<input type=button value="next" onclick="{
-    alert()                                         
-}">  
+
 
 </body>
 </html>
