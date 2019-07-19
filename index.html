@@ -16,7 +16,7 @@
   <h2 class="w3-center"><a href="https://www.rocksetta.com/tensorflowjs/">https://www.rocksetta.com/tensorflowjs/</a></h2>
   
 <input type=button value="next" onclick="{
-    alert()                                         
+     myIndex++;                                         
 }">  <br>
   
   
@@ -58,7 +58,7 @@ function carousel() {
   myIndex++;
   if (myIndex > x.length) {myIndex = 1}    
   x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 2000); // Change image every 2 seconds
+  setTimeout(carousel, 20000); // Change image every 20 seconds
 }
 </script>
 
