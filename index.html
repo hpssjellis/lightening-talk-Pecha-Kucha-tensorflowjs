@@ -104,10 +104,14 @@ function carousel() {
   
 function myCountDown(){
   myCountUp++
-  if (myCountUp >= myMainNum ) {myCountUp = myMainNum}
-  if (myIndex >= xSlide.length && myMainNum == myCountUp){
-     clearInterval(myCounting)
+  if (myCountUp >= myMainNum ) {
+    myCountUp = myMainNum                              
+  }
+  if (myIndex >= xSlide.length && myMainNum == myCountUp){ 
+    alert()
      document.getElementById("myNumSlides").innerHTML = ` Slide ${myIndex} of ${xSlide.length} slides. ALL DONE`
+     clearInterval(myCounting)             
+     clearInterval(myLooper)  
   }
   else {    
      document.getElementById("myNumSlides").innerHTML = ` Slide ${myIndex} of ${xSlide.length} slides. ${myMainNum-myCountUp} seconds remaining`
