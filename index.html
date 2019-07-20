@@ -82,7 +82,7 @@ function carousel() {
     x[i].style.display = "none";  
   }
   myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
+  if (myIndex > x.length) {myIndex = x.length}    
   x[myIndex-1].style.display = "block";  
   document.getElementById("myNumSlides").innerHTML = ` Slide ${myIndex} of ${x.length} slides`
   myLooper = setTimeout(carousel, myMainNum*1000); // Change image every x seconds
