@@ -103,7 +103,7 @@ function carousel() {
   
 function myCountDown(){
   myCountUp++
-  if (myCountUp <= 0 ) {myCountUp = 0}
+  if (myCountUp >= myMainNum ) {myCountUp = myMainNum}
  document.getElementById("myNumSlides").innerHTML = ` Slide ${myIndex} of ${xSlide.length} slides. ${myMainNum-myCountUp} seconds remaining`
 
 }
