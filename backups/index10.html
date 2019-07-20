@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Rocksetta</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+<style>
+.mySlides {display:none;}
+</style>
+  
+
+</head>
+
+<body bgcolor="lightblue">
+
+  <h2 class="w3-center">Lightening talk in Pecha Kucha format by Jeremy Ellis about tensorflowjs<br>Best just to go to the link at <a href="https://www.rocksetta.com/tensorflowjs/">https://www.rocksetta.com/tensorflowjs/</a></h2>
+ 
+ <input type=button value="Re-start" onclick="{
+   myIndex = 0  
+   clearInterval(myLooper)  
+   carousel()  
+}">   
+  
+<input type=button value="Back" onclick="{
+   myIndex = myIndex - 2    
+   if (myIndex <= 0){myIndex=0}                                      
+   myNext()
+}">   
+  
+<input type=button value="Next" onclick="{
+   myNext()
+}"> 
+  
+<input type=number value=20 id="myNum" style="width: 40px;" onchange="{
+   myMainNum = document.getElementById('myNum').value 
+   if (myMainNum <= 0){
+      myMainNum = 1
+      document.getElementById('myNum').value  = myMainNum                                                               
+   } 
+                                                                      
+ }"> seconds per slide.
+  
+  
+  <span id="myNumSlides"> ...</span>  <br>
+  
+  
+  
+<div class="w3-content w3-section" style="max-width:50%">
+  
+  <img class="mySlides" src="me-at-twitter.png" style="width:100%">
+  <img class="mySlides" src="my-tensorflowjs.png" style="width:100%">
+  <img class="mySlides" src="disclaimer.png" style="width:100%">
+  <img class="mySlides" src="atwoods-law.png" style="width:100%">
+  <img class="mySlides" src="main-tensorflowjs-page.png" style="width:100%">
+  <img class="mySlides" src="most-of-examples.png" style="width:100%">
+  
+  <img class="mySlides" src="tfjs-version.png" style="width:100%">
+  <img class="mySlides" src="basics.png" style="width:100%">
+  <img class="mySlides" src="xOr-keras01.png" style="width:100%">
+  <img class="mySlides" src="xOr-keras02.png" style="width:100%">
+  <img class="mySlides" src="general.png" style="width:100%">
+  
+  <img class="mySlides" src="matrix-math.png" style="width:100%">
+  <img class="mySlides" src="quadratic.png" style="width:100%">
+  <img class="mySlides" src="web-app.png" style="width:100%">
+  <img class="mySlides" src="monochrome.png" style="width:100%">
+  <img class="mySlides" src="one-hot.png" style="width:100%">
+  
+  <img class="mySlides" src="multi-path-keras.png" style="width:100%">
+  <img class="mySlides" src="mobilenet.png" style="width:100%">
+  <img class="mySlides" src="posenet.png" style="width:100%">
+ <!-- <img class="mySlides" src="face-api.png" style="width:100%"> -->
+  <img class="mySlides" src="end-page.png" style="width:100%">
+</div>
+
+  
+
+<script>
+ let myIndex = 1
+ let myLooper = 0
+ let myCounting = 0
+ let myMainNum = 20
+ let myCountUp = 0
+ let xSlide = document.getElementsByClassName("mySlides"); 
+ //carousel();
+
+function carousel() {
+  clearInterval(myCounting)
+  myCountUp = -1
+  var i;
+
+  for (i = 0; i < xSlide.length; i++) {
+    xSlide[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > xSlide.length) {myIndex = xSlide.length}    
+  xSlide[myIndex-1].style.display = "block";  
+  myCountDown()
+  myCounting = setInterval(myCountDown, 1000)
+  myLooper = setTimeout(carousel, myMainNum*1000); // Change image every x seconds
+}
+  
+function myCountDown(){
+  myCountUp++
+  if (myCountUp >= myMainNum ) {
+    myCountUp = myMainNum                              
+  }
+  if (myIndex >= xSlide.length && myMainNum == myCountUp){ 
+     document.getElementById("myNumSlides").innerHTML = ` Slide ${myIndex} of ${xSlide.length} slides. ALL DONE`
+     clearInterval(myCounting)             
+     clearInterval(myLooper)  
+  }
+  else {    
+     document.getElementById("myNumSlides").innerHTML = ` Slide ${myIndex} of ${xSlide.length} slides. ${myMainNum-myCountUp} seconds remaining`
+  }
+}
+
+function myNext(){
+  //myIndex++;                           
+  clearInterval(myLooper)  
+  carousel()  
+}  
+  
+ document.getElementsByClassName('mySlides')[0].style.display = 'block'
+  
+</script>  
+  
+<br>
+  Github for this website at <a href="https://github.com/hpssjellis/lightening-talk-Pecha-Kucha-tensorflowjs">https://github.com/hpssjellis/lightening-talk-Pecha-Kucha-tensorflowjs</a><br>
+  This gitpages webpage at <a href="https://hpssjellis.github.io/lightening-talk-Pecha-Kucha-tensorflowjs/"> https://hpssjellis.github.io/lightening-talk-Pecha-Kucha-tensorflowjs/</a><br>
+  </body>
+</html>
