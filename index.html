@@ -97,7 +97,7 @@ function carousel() {
   if (myIndex > xSlide.length) {myIndex = xSlide.length}    
   xSlide[myIndex-1].style.display = "block";  
   
-  myCounting = setInterval('myCountDown', 1000)
+  myCounting = setInterval(myCountDown, 1000)
   myLooper = setTimeout(carousel, myMainNum*1000); // Change image every x seconds
 }
   
