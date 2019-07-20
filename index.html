@@ -82,12 +82,13 @@
  let myLooper = 0
  let myCounting = 0
  let myMainNum = 20
- let myCountUp = 0;
+ let myCountUp = 0
  let xSlide = document.getElementsByClassName("mySlides"); 
  //carousel();
 
 function carousel() {
   clearInterval(myCounting)
+  myCountUp = 0
   var i;
 
   for (i = 0; i < xSlide.length; i++) {
