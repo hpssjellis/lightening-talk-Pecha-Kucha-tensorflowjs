@@ -30,7 +30,14 @@
    clearInterval(myLooper)  
    carousel()                                                
 }"> 
-  
+ 
+<input type=button value="Start with Sound 02 better" onclick="{
+   let myAudio01 = new Audio('Better-tfjs.m4a');
+   myAudio01.play(); 
+   myIndex = 0  
+   clearInterval(myLooper)  
+   carousel()                                                
+}">  
   
 <input type=button value="Back" onclick="{
    myIndex = myIndex - 2    
