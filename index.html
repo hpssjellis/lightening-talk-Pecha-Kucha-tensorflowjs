@@ -23,22 +23,24 @@
    carousel()  
 }">   
 
-<input type=button value="Start with Sound 01 slide 5 changed" onclick="{
-   let myAudio01 = new Audio('20x20practice01.m4a');
-   myAudio01.play(); 
-   myIndex = 0  
-   clearInterval(myLooper)  
-   carousel()                                                
-}"> 
+
  
-<input type=button value="Start with Sound 02 better" onclick="{
+<input type=button value="Start with Sound Normal" onclick="{
    let myAudio01 = new Audio('Better-tfjs.m4a');
    myAudio01.play(); 
    myIndex = 0  
    clearInterval(myLooper)  
    carousel()                                                
 }">  
-  
+
+ 
+<input type=button value="Start with Sound Mellow" onclick="{
+   let myAudio01 = new Audio('Mellow.m4a');
+   myAudio01.play(); 
+   myIndex = 0  
+   clearInterval(myLooper)  
+   carousel()                                                
+}">    
 <input type=button value="Back" onclick="{
    myIndex = myIndex - 2    
    if (myIndex <= 0){myIndex=0}                                      
