@@ -41,6 +41,17 @@
    clearInterval(myLooper)  
    carousel()                                                
 }">    
+  
+<input type=button value="Start with Sound Intense" onclick="{
+   let myAudio01 = new Audio('Intense.m4a');
+   myAudio01.play(); 
+   myIndex = 0  
+   clearInterval(myLooper)  
+   carousel()                                                
+}">    
+    
+  
+  
 <input type=button value="Back" onclick="{
    myIndex = myIndex - 2    
    if (myIndex <= 0){myIndex=0}                                      
